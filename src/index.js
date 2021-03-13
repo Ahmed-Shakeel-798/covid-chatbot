@@ -48,7 +48,7 @@ async function send_message(body) {
 async function setup_network() {
 	let public_url = await ngrok.connect(process.env.PORT);
 	console.log(`Public Url:${public_url}`);
-	let webhook_url = 'https://7a0cb684eab0.ngrok.io/webhook';
+	let webhook_url = 'https://api.maytapi.com/webhook/live/send/6e153c20-83a5-11eb-8eab-0d0526157443/webhook';
 	    //`${public_url}/webhook`;
 	let url = `${INSTANCE_URL}/${PRODUCT_ID}/setWebhook`;
 	let response = await rp(url, {
