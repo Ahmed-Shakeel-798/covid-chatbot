@@ -48,7 +48,8 @@ async function send_message(body) {
 async function setup_network() {
 	let public_url = await ngrok.connect(process.env.PORT);
 	console.log(`Public Url:${public_url}`);
-	let webhook_url = `${public_url}/webhook`;
+	let webhook_url = 'https://7a0cb684eab0.ngrok.io/webhook';
+	    //`${public_url}/webhook`;
 	let url = `${INSTANCE_URL}/${PRODUCT_ID}/setWebhook`;
 	let response = await rp(url, {
 		method: 'POST',
